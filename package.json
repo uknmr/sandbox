@@ -1,0 +1,8 @@
+{
+  "name": "sandbox",
+  "private": true,
+  "version": "0.1.0",
+  "devDependencies": {
+    "amphtml-validator": "^1.0.20"
+  }
+}
