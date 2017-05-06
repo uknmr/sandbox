@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.1.0",
   "devDependencies": {
-    "amphtml-validator": "^1.0.20"
+    "amphtml-validator": "^1.0.20",
+    "husky": "^0.13.3",
+    "lint-staged": "^3.4.1"
   }
 }
