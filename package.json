@@ -2,6 +2,15 @@
   "name": "sandbox",
   "private": true,
   "version": "0.1.0",
+  "scripts": {
+    "lint:html": "amphtml-validator",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.html": [
+      "lint:html"
+    ]
+  },
   "devDependencies": {
     "amphtml-validator": "^1.0.20",
     "husky": "^0.13.3",
