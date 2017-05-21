@@ -4,7 +4,11 @@
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "cd dist && node server",
+    "dev": "run-p watch start-demon",
+    "start-demon": "cd dist && nodemon server.js",
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "license": "MIT",
   "dependencies": {
