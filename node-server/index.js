@@ -1,10 +1,20 @@
-const express = require('express')
-const PORT = 8080
+import express from 'express'
+import React from 'react'
+import { renderToStaticMarkup } from 'react-dom/server'
+import template from './template'
+import App from './App'
 
-const app = express()
-app.get('/', (req, res) => {
-  res.send('Hello world!\n')
+const PORT = 8080
+const server = express()
+
+server.get('*', (req, res) => {
+  const title = 'Hello world!'
+  const html = renderToStaticMarkup(<App title={title} />)
+  res.send(template({
+    body: html,
+    title 
+  }))
 })
 
-app.listen(PORT)
+server.listen(PORT)
 console.log(`Running on http://localhost:${PORT}`)
