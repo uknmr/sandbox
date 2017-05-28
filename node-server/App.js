@@ -1,5 +1,9 @@
 import React from 'react'
+import styled from 'styled-components'
 
-const App = (props) => <h1>{props.title}</h1>
+const Title = styled.h1`
+  color: rgb(34, 47, 36);
+`
+const App = (props) => <Title>{props.title}</Title>
 
 export default App
