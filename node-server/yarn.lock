@@ -1086,6 +1086,18 @@ crypto-browserify@^3.11.0:
     public-encrypt "^4.0.0"
     randombytes "^2.0.0"
 
+css-tree@1.0.0-alpha17:
+  version "1.0.0-alpha17"
+  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.0.0-alpha17.tgz#7ab95ab72c533917af8be54313fec81841c5223a"
+  dependencies:
+    source-map "^0.5.3"
+
+csso@~3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/csso/-/csso-3.0.1.tgz#1469af5ee2ec509addadd8777aa0e45acb6b2f58"
+  dependencies:
+    css-tree "1.0.0-alpha17"
+
 dashdash@^1.12.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
@@ -2622,6 +2634,13 @@ postcss-cli@^4.0.0:
     postcss-reporter "^3.0.0"
     read-cache "^1.0.0"
     yargs "^8.0.1"
+
+postcss-csso@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-csso/-/postcss-csso-2.0.0.tgz#43c995e0dec54b44e846752de1a435e97f0eb1cd"
+  dependencies:
+    csso "~3.0.0"
+    postcss "^5.0.0"
 
 postcss-load-config@^1.1.0:
   version "1.2.0"
