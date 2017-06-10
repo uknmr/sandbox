@@ -7,10 +7,12 @@
     "start": "cd dist && node server",
     "dev": "run-p watch start-demon",
     "start-demon": "cd dist && nodemon server.js",
-    "build": "webpack",
-    "watch": "webpack --watch",
+    "build": "run-s build:*",
     "build:css": "postcss styles/*.css --dir dist/",
-    "watch:css": "yarn build:css -- --watch"
+    "build:js": "webpack",
+    "watch": "run-p watch:*",
+    "watch:css": "yarn build:css -- --watch",
+    "watch:js": "yarn build:js -- --watch"
   },
   "license": "MIT",
   "dependencies": {
