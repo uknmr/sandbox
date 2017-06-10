@@ -23,7 +23,11 @@ module.exports = {
             presets: ['env', 'react']
           }
         }
-      }
+      },
+      {
+        test: /\.css$/,
+        use: 'raw-loader',
+      },
     ]
   },
   target: 'node',

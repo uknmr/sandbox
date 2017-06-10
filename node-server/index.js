@@ -8,11 +8,14 @@ const PORT = 8080
 const server = express()
 
 server.get('*', (req, res) => {
-  const title = 'Hello World!'
+  const title = 'Hello SSR!'
   const html = renderToStaticMarkup(<App title={title} />)
+  const css = require('./dist/main.css')
+  
   res.send(template({
     body: html,
-    title 
+    title,
+    css,
   }))
 })
 
