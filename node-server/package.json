@@ -13,7 +13,8 @@
     "watch": "run-p watch:*",
     "watch:css": "yarn build:css -- --watch",
     "watch:js": "yarn build:js -- --watch",
-    "test": "jest"
+    "test": "jest",
+    "prepush": "yarn test"
   },
   "license": "MIT",
   "dependencies": {
@@ -28,6 +29,7 @@
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
+    "husky": "^0.14.1",
     "jest": "^20.0.4",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
