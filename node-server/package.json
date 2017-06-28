@@ -12,7 +12,8 @@
     "build:js": "webpack",
     "watch": "run-p watch:*",
     "watch:css": "yarn build:css -- --watch",
-    "watch:js": "yarn build:js -- --watch"
+    "watch:js": "yarn build:js -- --watch",
+    "test": "jest"
   },
   "license": "MIT",
   "dependencies": {
