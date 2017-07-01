@@ -3,5 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "firebase-tools": "^3.9.1"
+  }
 }
