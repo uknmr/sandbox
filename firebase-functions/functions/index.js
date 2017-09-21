@@ -39,7 +39,10 @@ exports.githubWebhook = functions.https.onRequest((req, res) => {
 
 const sendTalknote = data => {
   transporter.sendMail(data)
-    .then(console.log(`🚀${data.to} にメールした`))
+    .then(info => {
+      console.log(`🚀${info.messageId} にメールした`)
+      console.log(`✉️${nodemailer.getTestMessageUrl(info)}`)
+    })
     .catch(error => {
       console.error(error)
     })
